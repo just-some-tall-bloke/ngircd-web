@@ -10,10 +10,15 @@
 	den Internet Relay Chat (IRC), speziell für kleinere oder private
 	Netze, der unter der GNU General Public License
 	(<a href="doc/COPYING" hreflang="en">GPL</a>)
-	entwickelt wird. Er ist einfach zu konfigurieren, kann mit dynamischen
-	IP-Adressen verwendet werden und unterstützt IPv6, SSL-Verschlüsselung
-	und PAM-Authentifizierung. Der Server ist von Grund auf neu geschrieben
-	worden und basiert nicht auf dem „Urvater“, dem Daemon des IRCNet.
+	entwickelt wird.
+</p>
+<p>
+	Der Server ist recht einfach zu konfigurieren, kann mit dynamischen
+	IP-Adressen umgehen und unterstützt optional IDENT, IPv6-Verbindungen,
+	SSL-geschützte Links und PAM für die Benutzerauthentifizierung sowie
+	eine Zeichensatzkonvertierung für alte Clients. Der Server wurde von
+	Grund auf neu geschrieben und basiert nicht auf dem <q>Urvater</q>, dem
+	Dämon des IRCNet.
 </p>
 <p>
 	Der Name <em>ngIRCd</em> steht für <em>next generation IRC daemon</em>,
@@ -36,7 +41,7 @@
 		in Betrieb zu halten
 	</li>
 	<li>
-		unterstützt IPv6 und SSL
+		unterstützt optional IDENT, IPv6, SSL, PAM und iconv.
 	</li>
 	<li>
 		keine Probleme mit Servern, deren IP-Adressen dynamisch sind
@@ -51,21 +56,9 @@
 	</li>
 </ul>
 <div id="preview">
-	<code><a id="v_toggle" href="#" name="v_toggle">ngircd --help</a></code><br>
+	<code><a id="v_toggle" href="#">ngircd --help</a></code><br>
 	<div id="vertical_slide">
-		<samp>ngIRCd 22.1-IRCPLUS+SYSLOG+ZLIB-x86_64/unknown/linux-gnu
-Copyright (c)2001-2015 Alexander Barton (&lt;alex@barton.de&gt;) and Contributors.
-Homepage: &lt;http://ngircd.barton.de/&gt;
-
-This is free software; see the source for copying conditions. There is NO
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-
-  -f, --config &lt;f&gt;   use file &lt;f&gt; as configuration file
-  -n, --nodaemon     don't fork and don't detach from controlling terminal
-  -p, --passive      disable automatic connections to other servers
-  -t, --configtest   read, validate and display configuration; then exit
-  -V, --version      output version information and exit
-  -h, --help         display this help and exit</samp>
+		<samp><?php include 'common/help.inc' ?></samp>
 	</div>
 </div>
 <h2>

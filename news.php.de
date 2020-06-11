@@ -6,14 +6,15 @@
 	Neuigkeiten &amp; Historie
 </h2>
 <p>
-	Aktuelle Neuigkeiten: ngIRCd auf <a href="http://twitter.com/#!/ngIRCd">Twitter</a>.
+	Aktuelle Neuigkeiten: ngIRCd auf <a href="https://twitter.com/ngIRCd">Twitter</a>.
 </p>
 <h3 id="status">
 	Status
 </h3>
 <p>
 	Die aktuelle stabile Version ist
-	<strong>Release 23</strong> vom 16. November 2015,
+	<strong>Release 25</strong> vom 23. Januar 2019,
+	zum Test steht <strong>Release 26~rc1</strong> vom 10. Mai 2020 bereit,
 	siehe auch die
 	<a href="download.php.de">Download-M&ouml;glichkeiten</a>.
 </p>
@@ -22,7 +23,7 @@
 </h3>
 <p class="security">
 	<strong>Achtung:</strong>
-	ngIRCd 20, 20.1 und 20.2 beinhaltet einen Fehler,
+	ngIRCd 20, 20.1 und 20.2 beinhalten einen Fehler,
 	der zum Absturz des Servers führen kann, wenn die Konfigurationsoption
 	<q>NoticeAuth</q> aktiviert ist (was <em>nicht</em> der Default ist).
 	ngIRCd 20 und 20.1 beinhaltet zudem einen Fehler, der es jedem Nutzer

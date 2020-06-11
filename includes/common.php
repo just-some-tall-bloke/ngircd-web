@@ -1,8 +1,7 @@
 <?php
 
 function begin_page($lang = 'en', $title = null) {
-	echo '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" ';
-	echo '"http://www.w3.org/TR/html4/strict.dtd">' . "\n\n";
+	echo '<!DOCTYPE html>';
 	echo '<html lang="' . $lang . '">' . "\n";
 	echo '<head>';
 	if ($title)
@@ -10,14 +9,13 @@ function begin_page($lang = 'en', $title = null) {
 	else
 		echo '<title>ngIRCd: Next Generation IRC Daemon</title>';
 	echo '<meta http-equiv="content-type" content="text/html; charset=utf-8">';
-	echo '<meta http-equiv="content-language" content="' . $lang . '">';
 	echo '<meta name="author" content="Alexander Barton">';
 	echo '<meta name="author-email" content="alex@barton.de">';
 	echo '<meta name="MSSmartTagsPreventParsing" content="TRUE">';
 	echo '<link rel="stylesheet" href="common/styles.css" type="text/css" media="screen">';
 	echo '<link rel="author" href="mailto:alex@barton.de" title="E-Mail an Alex">';
-	echo '<script type="text/javascript" src="common/mootools.js"></script>';
-	echo '<script type="text/javascript" src="common/slide.js"></script>';
+	echo '<script src="common/mootools.js"></script>';
+	echo '<script src="common/slide.js"></script>';
 	echo "</head>\n<body>";
 	echo '<div id="bodyBox">';
 
@@ -63,12 +61,32 @@ function begin_page($lang = 'en', $title = null) {
 
 function end_page() {
 	echo '</div>';
-	echo '<p id="footer">ngIRCd &copy;2001-2015 Alexander Barton and ';
-	echo '<a href="doc/AUTHORS">Contributors</a><br />';
-	echo '<a href="http://flattr.com/thing/343331/ngIRCd" target="_blank">';
-	echo '<img src="common/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />';
-	echo '</a></p>';
+	echo '<p id="footer">ngIRCd &copy;2001-2020 Alexander Barton and ';
+	echo '<a href="doc/AUTHORS">Contributors</a>';
 	echo '</div></body></html>';
+}
+
+function download_links($rel, $server, $protocol = "https") {
+	echo "<dd>";
+	echo "Server: <em>$server</em> ";
+	/* Download folder */
+	echo "(<a href=\"$protocol://$server/pub/ngircd/\">$protocol</a>";
+	if ($protocol == "https")
+		echo "&thinsp;🔒";
+	echo "): ";
+	/* Archive files */
+	$count = 1;
+	foreach (array('tar.gz', 'tar.xz', 'tar.Z') as $suffix) {
+		if ($count > 1)
+			echo ', ';
+		echo "<a href=\"$protocol://$server/pub/ngircd/ngircd-$rel.$suffix\">";
+		if ($suffix == "tar.gz")
+			echo "ngircd-$rel.";
+		echo "$suffix</a> ";
+		echo "(<a href=\"$protocol://$server/pub/ngircd/ngircd-$rel.$suffix.sig\">Sig</a>)";
+		$count++;
+	}
+	echo "</dd>";
 }
 
 ?>

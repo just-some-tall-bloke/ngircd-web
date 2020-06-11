@@ -10,7 +10,7 @@
 </h3>
 <p>
 	Solltest du Bugs finden oder Ideen f&uuml;r Erweiterungen haben, trage
-	diese am Besten in den <a href="#bugs">Bug-Tracker</a> des ngIRCd ein.
+	diese am Besten in den <a href="bugtracker.php">Bug-Tracker</a> des ngIRCd ein.
 	F&uuml;r Diskussionen und Fragen rund um den ngIRCd ist zudem eine
 	<a href="#ml">Mailingliste</a> eingerichtet (an welche auch ohne
 	Registrierung geschrieben werden kann).
@@ -39,26 +39,16 @@
 </p>
 <p>
 	Die Anmeldung erfolgt &uuml;ber die
-	<a href="http://arthur.barton.de/mailman/listinfo/ngircd-ml">Hauptseite der Mailingliste</a>,
+	<a href="https://ngircd.barton.de/mailman/listinfo/ngircd-ml">Hauptseite der Mailingliste</a>,
 	ist zum Schreiben an die Liste jedoch nicht zwingend erforderlich.
 </p>
 <p>
 	Alle Beitr&auml;ge werden zudem in einem
-	<a href="http://arthur.barton.de/pipermail/ngircd-ml/">Archiv</a>
+	<a href="https://ngircd.barton.de/pipermail/ngircd-ml/">Archiv</a>
 	gespeichert.
 </p>
 <p>
 	E-Mail-Adresse: <a href="mailto:ngircd-ml@ngircd.barton.de">ngircd-ml@ngircd.barton.de</a>.
-</p>
-<h4 id="gmane">
-	GMANE
-</h4>
-<p>
-	Alle Mails der Mailingliste werden zudem von
-	<a href="http://gmane.org/">GMANE</a> als Gruppe
-	<a href="http://dir.gmane.org/gmane.network.irc.ngircd">gmane.network.irc.ngircd</a>
-	gef&uuml;hrt und kann dort &uuml;ber ein Web-Frontend, als RSS-Feed
-	oder &uuml;ber NNTP gelesen werden.
 </p>
 <h3>
 	Sonstiges
